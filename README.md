@@ -36,11 +36,11 @@ The original version of DIBaS dataset contains a total of 33 species of microorg
 Note: We checked the original link in January/2021 and it was not working, here you have an alternative method to download it (run the command in the folder you want):
 1. Download the zip file:
 ```
-wget
+https://drive.google.com/file/d/1wCNmQMA3pdHeU1rTrHeLehqIYZ2rF_uy/view?usp=sharing
 ```
 2. Extract:
 ```
-
+unzip DIBaS.zip
 ```
 
 It is recommended to put the data into the Dataset/ folder. The Jupyter Notebooks use defined paths to load the files, but you can modify it to your needs.
