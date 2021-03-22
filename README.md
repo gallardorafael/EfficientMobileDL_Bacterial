@@ -48,7 +48,7 @@ It is recommended to put the data into the Dataset/ folder. The Jupyter Notebook
 ## Augmented version of the DIBaS dataset
 Our data augmentation strategy is aimed to provide atleast 35 different images per each sample in the orig-inal dataset. The proposed approach tries to simulate different levels of zoom for the same bacterial sample,which is achieved by cropping different regions of different sizes of the full image. The full process is described in the following algorithm:
 
-<img src="repo/assets/Algorithm1.png" width=350 align=center>
+<img src="repo/assets/Algorithm1.png" width=400 align=center>
 
 We provide a script to augment the dataset in the same way. It is available on: Dataset/augment_dataset.py, you can augmente your data as follows:
 ```
@@ -59,31 +59,54 @@ python3 augment_dataset.py --input_dir DIBaS/ --output_dir DIBaS_augmented --siz
 The following table shows the distribution of samples before and after the augmentation.
 
 <img src="repo/assets/ClassDistrib.png" width=400 align=center>
-![ClassDistrib](repo/assets/ClassDistrib.png)
 
 The next figure illustrates a sample of the DIBaS dataset, after applying our augmentation method:
 
-<img src="repo/assets/AugmentationSample.png" width=600 align=center>
-![AugmentedSample](repo/assets/AugmentationSample.png)
+<img src="repo/assets/AugmentationSample.png" width=400 align=center>
 
-## Pre-trained models
-The best models, both for the original and the augmented version of the dataset are publicy available:
-
-1. original32x224x224in50.pth: Trained over the original version of the dataset.
-2. 2fc_augmented32x224x224in10.pth: Trained over the augmented version of the dataset.
-
-Both pretrained models are available on the folder: models/
 
 ## Examples and code: The jupyter Notebook
-We provide both Jupyter Notebooks, to work with the original and augmented versions of the dataset, respectively:
+We provide two Jupyter Notebooks per each architecture: one for each version of the dataset. The names are standardized in order to easily find the desired notebook:
 
-1. BEST_MobileNetv2_original.ipynb: To work with the original version of the dataset.
-2. BEST_test5_MobileNetv2_augmented_2fc.ipynb: To work with the augmented version of the dataset.
+1. An * at the beginning of the name indicates that the model in that notebook was trained from scratch (i.e do not use transfer-learning),
+2. Notebooks with the 'original_' prefix indicates that the experiments on that notebook use the original version of the dataset,
+3. Notebooks with the 'augmented_' prefix indicates that the experiments on that notebook use the augmented version of the dataset,
+4. All words after prefix correspond to the name of the architecture in the notebook.
+
+List of architectures and names:
+- shufflenet_v2_x0_5
+- squeezenet1_1
+- squeezenet1_0
+- shufflenet_v2_x1_0
+- mobilenet_v3_small
+- mobilenet_v2
+- shufflenet_v2_x1_5
+- efficientnet-b0
+- mobilenet_v3_large
+- shufflenet_v2_x2_0
+- efficientnet-b1
+- efficientnet-b2
 
 ## Results
-The following table summarizes the results of each trained model, with different hyperparameters and for both versions of the dataset. The first column indicates the number of fully connected layers in the classifier block of the network, the second column is for the version of the dataset, the third column shows the number of training epochs and the fourth presents the accuracy score obtained by the model in that row.
+The following tables summarize the results of all experiments. The columns have the following information:
+1. Name of the architecture
+2. Number of trainable parameters in the network
+3. Total samples in the dataset
+4. Number of folds in cross-validation
+5. Number of epochs per fold
+6. Top-1 accuracy average of the 10-folds
+7. Top-5 accuracy average of the 10-folds
+8. Precision average of the 10-folds
+9. Recall average of the 10-folds
+10. F1 score average of the 10-folds
 
-![Results](res/accuracy.png)
+List of architectures and their results when using cross-validation in the original dataset (notebooks with 'original_' prefix):
+
+<img src="repo/assets/OriginalResults.png" width=800 align=center>
+
+List of architectures and their results when using cross-validation in the augmented dataset (notebooks with 'augmented_' prefix):
+
+<img src="repo/assets/AugmentedResults.png" width=800 align=center>
 
 ### Some graphical visualizations
 #### Identification of Escherichia coli
