@@ -108,27 +108,6 @@ List of architectures and their results when using cross-validation in the augme
 
 <img src="repo/assets/AugmentedResults.png" width=800 align=center>
 
-### Some graphical visualizations
-#### Identification of Escherichia coli
-
-![Example1](res/Ecoli.png)
-
-#### Identification of Neisseria gonorrhoeae
-
-![Example1](res/gonorrhoea.png)
-
-#### Identification of Listeria monocytogenes
-
-![Example1](res/listeria.png)
-
-#### Identification of Lactobacillus plantarum
-
-![Example1](res/plantarum.png)
-
-#### Identification of Staphylococcus aureus
-
-![Example1](res/staph_aureus.png)
-
 ## Citations
 If you use/modify our code:
 ```
