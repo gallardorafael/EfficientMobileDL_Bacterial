@@ -87,6 +87,12 @@ List of architectures and names:
 - efficientnet-b1
 - efficientnet-b2
 
+### How to run:
+If you installed all the requirements, you should be able to run every notebook just by running a Jupyter server in your python environment:
+```
+jupyter notebook
+```
+
 ## Results
 The following tables summarize the results of all experiments. The columns have the following information:
 1. Name of the architecture
