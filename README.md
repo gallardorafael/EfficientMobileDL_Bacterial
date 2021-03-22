@@ -48,9 +48,7 @@ It is recommended to put the data into the Dataset/ folder. The Jupyter Notebook
 ## Augmented version of the DIBaS dataset
 Our data augmentation strategy is aimed to provide atleast 35 different images per each sample in the orig-inal dataset. The proposed approach tries to simulate different levels of zoom for the same bacterial sample,which is achieved by cropping different regions of different sizes of the full image. The full process is described in the following algorithm:
 
-<img src="repo/assets/Algorithm1.png" width=300 align=center>
-
-%![Algorithm1](repo/assets/Algorithm1.png)
+<img src="repo/assets/Algorithm1.png" width=350 align=center>
 
 We provide a script to augment the dataset in the same way. It is available on: Dataset/augment_dataset.py, you can augmente your data as follows:
 ```
@@ -60,10 +58,12 @@ python3 augment_dataset.py --input_dir DIBaS/ --output_dir DIBaS_augmented --siz
 
 The following table shows the distribution of samples before and after the augmentation.
 
+<img src="repo/assets/ClassDistrib.png" width=400 align=center>
 ![ClassDistrib](repo/assets/ClassDistrib.png)
 
 The next figure illustrates a sample of the DIBaS dataset, after applying our augmentation method:
 
+<img src="repo/assets/AugmentationSample.png" width=600 align=center>
 ![AugmentedSample](repo/assets/AugmentationSample.png)
 
 ## Pre-trained models
