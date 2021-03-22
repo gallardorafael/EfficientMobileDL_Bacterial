@@ -46,22 +46,23 @@ unzip DIBaS.zip
 It is recommended to put the data into the Dataset/ folder. The Jupyter Notebooks use defined paths to load the files, but you can modify it to your needs.
 
 ## Augmented version of the DIBaS dataset
-We perform some steps to augment the quantity of samples in the dataset, the following list enumerates the steps we have taken:
+Our data augmentation strategy is aimed to provide atleast 35 different images per each sample in the orig-inal dataset. The proposed approach tries to simulate different levels of zoom for the same bacterial sample,which is achieved by cropping different regions of different sizes of the full image. The full process is described in the following algorithm:
 
-1. Obtain 10 crops of the original image. Each crop with a size of 224x224 pixels.
-Four crops from the corners and one from the center, each was flipped horizontally
-to obtain the other five crops. Add the 10 crops of each image to the augmented
-dataset.
-2. Add the resized versions of the original images (of 2048x1532 pixels) to the aug-
-mented set. Each image was resized to 224x224 pixels using Lanczos resampling.
-3. Rotate every sample in 90, 180 and 270 degrees. Add the resulted images to the
-augmented dataset.
+![Algorithm1](repo/assets/Algorithm1.png)
 
-We provide a script to augment the dataset in the same way. It is available on: scripts/augment_dataset.py.
+We provide a script to augment the dataset in the same way. It is available on: Dataset/augment_dataset.py, you can augmente your data as follows:
+```
+cd Dataset/
+python3 augment_dataset.py --input_dir DIBaS/ --output_dir DIBaS_augmented --size 224
+```
 
 The following table shows the distribution of samples before and after the augmentation.
 
-![AugmentedData](res/augmented.png)
+![ClassDistrib](repo/assets/ClassDistrib.png)
+
+The next figure illustrates a sample of the DIBaS dataset, after applying our augmentation method:
+
+![AugmentedSample](repo/assets/AugmentationSample.png)
 
 ## Pre-trained models
 The best models, both for the original and the augmented version of the dataset are publicy available:
