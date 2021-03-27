@@ -33,16 +33,6 @@ pip3 install -r requirements.txt
 ## Digital Image of Bacterial Species (DIBaS) dataset
 The original version of DIBaS dataset contains a total of 33 species of microorganisms, approximately 20 RGB images (of 2048x1532 pixels) per specie. We remove the set of images of Candida albicans colonies as it is considered fungi. The dataset was collected by the Chair of Microbiology of the Jagiellonian University in Krakow. The samples were stained using the Gramm’s method. All images were taken with an Olympus CX31 Upright Biological Microscope and a SC30 camera with a 100 times objective under oil-immersion. The DIBaS dataset is publicly available in the following [link](http://misztal.edu.pl/software/databases/dibas/).
 
-Note: We checked the original link in January/2021 and it was not working, here you have an alternative method to download it (run the command in the folder you want):
-1. Download the zip file:
-```
-https://drive.google.com/file/d/1wCNmQMA3pdHeU1rTrHeLehqIYZ2rF_uy/view?usp=sharing
-```
-2. Extract:
-```
-unzip DIBaS.zip
-```
-
 It is recommended to put the data into the Dataset/ folder. The Jupyter Notebooks use defined paths to load the files, but you can modify it to your needs.
 
 ## Augmented version of the DIBaS dataset
