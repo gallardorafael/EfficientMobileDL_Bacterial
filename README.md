@@ -1,5 +1,5 @@
 # Efficient and Mobile Deep Learning Architectures for Fast Identification of Bacterial Strains in Resource-Constrained Devices: Code and instructions.
-Repository for the paper: [Efficient and Mobile Deep Learning Architectures for Fast Identification of Bacterial Strains in Resource-Constrained Devices](https://gallardorafael.github.io/assets/docs/DRAFT_EffMobDIBaS.pdf)
+Repository for the paper: [Efficient and Mobile Deep Learning Architectures for Fast Identification of Bacterial Strains in Resource-Constrained Devices](https://arxiv.org/abs/2106.06505)
 
 Authors: Rafael Gallardo García, Sofía Jarquín Rodríguez, Beatriz Beltrán Martínez, Rodolfo Martínez Torres, Carlos Hernández Gracidas
 
